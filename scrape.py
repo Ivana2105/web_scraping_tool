@@ -14,9 +14,7 @@ from HTMLTable import *
 
 def get_table(url, sport, element, iid, index, clas):
     
-    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)\
-               AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 \
-               Safari/537.36'}
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     res = requests.get(url,headers=headers)
     plain_text = res.text 
     soup = BeautifulSoup(plain_text,"html.parser")
@@ -74,8 +72,7 @@ def Main():
      
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("url", help="choose the Staff Directory page URL to\
-                        be scraped")
+    parser.add_argument("url", help="choose the Staff Directory page URL to be scraped")
     parser.add_argument("sport", help="choose sport to be filtered")
     parser.add_argument("--html_elem", help="choose html element",\
                         choices=['table','tr','td'])
@@ -86,8 +83,7 @@ def Main():
     args = parser.parse_args()
     if (args.html_elem and args.element_id is None 
         and args.element_index is None and args.element_class is None):
-        parser.error("--html_elem requires --element_id or --element_index \
-                     or --element_class")
+        parser.error("--html_elem requires --element_id or --element_index or --element_class")
     
     url = args.url
     sport = args.sport
