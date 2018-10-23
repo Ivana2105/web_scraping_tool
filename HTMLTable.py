@@ -116,8 +116,7 @@ def parse(table, sport, element, iid, index, clas):
                   .format(sport,  val))
         else:
             if ind1[0] == ind2[0] - 1:
-                print('It is impossible to find information. Please improve\
-                          your program.')
+                print('It is impossible to find information. Please improve your program.')
             else:
                 start = ind1[0]+1
                 end = ind2[0]-1
@@ -144,8 +143,7 @@ def parse(table, sport, element, iid, index, clas):
             print('There is no sport with name {}'.format(sport))
         else:
             if ind1[0] == ind2[0] - 1:
-                print('It is impossible to find information. Please improve\
-                          your program.')
+                print('It is impossible to find information. Please improve your program.')
             else:
                 start = ind1[0]+1
                 end = ind2[0]-1
